@@ -1,0 +1,21 @@
+_schema-version: "2.1"
+ID: btp_db_employee
+version: 0.0.2
+modules:
+- name: db
+  type: hdb
+  path: db
+  requires:
+  - name: hdi_BTP_TESTE
+    properties:
+      TARGET_CONTAINER: ~{hdi-container-name}
+resources:
+- name: hdi_BTP_TESTE
+  parameters:
+    service: hana
+    service-plan: hdi-shared
+    config: 
+      schema: BTP_DB_TESTEMP
+  type: com.sap.xs.hdi-container
+  properties:
+    hdi-container-name: ${service-name}

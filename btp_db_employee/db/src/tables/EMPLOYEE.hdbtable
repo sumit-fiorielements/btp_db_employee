@@ -1,0 +1,10 @@
+COLUMN TABLE "EMPLOYEE_TABLES.EMPLOYEE" (
+    ID              NVARCHAR(36),
+    FRONTEND_ID     NVARCHAR(50),
+    EMAIL_ID        NVARCHAR(255),
+    createdAt       TIMESTAMP,
+    createdBy       NVARCHAR(255),
+    modifiedAt      TIMESTAMP,
+    modifiedBy      NVARCHAR(255),
+PRIMARY KEY(ID)
+)
